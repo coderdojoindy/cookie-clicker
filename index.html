@@ -3,130 +3,227 @@
 <head>
 <title>Cookie Clicker</title>
 <!--
-Code and graphics copyright Orteil, 2013
+Code and graphics copyright Orteil, 2013-2014
 Feel free to alter this code to your liking, but please do not re-host it, do not profit from it and do not present it as your own.
 
 -TODO :
 	-milk toys
 	-temple building
-	-dungeons
 	-gambling
-	-better tooltips
 	-better prestige
-	-add canvas support
-	-timer bars for golden cookie effects
-	-set event listeners instead of onclick
+	-more dungeons
 	-more zebras
 -->
 
-<link rel="shortcut icon" href="img/favicon.ico" />
-<link href="http://fonts.googleapis.com/css?family=Kavoon&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="style.css?v=1.5028" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"cd4b90bf1951700c5f85533d43ef58ef",petok:"6f6c12597e2ebe7fbe7c77edac341c27109f9ac6-1424609839-1800",zone:"dashnet.org",rocket:"0",apps:{"ga_key":{"ua":"UA-29324474-2","ga_bs":"2"},"abetterbrowser":{"ie":"8"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="../../ajax.cloudflare.com/cdn-cgi/nexp/dok3v%3d919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href="../../fonts.googleapis.com/css9959.css?family=Kavoon&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="style26c0.css?v=1.77" rel="stylesheet" type="text/css">
+<!--->
+<meta name="viewport"
+content="initial-scale=2.0,
+maximum-scale=2.0,
+minimum-scale=2.0,
+height=device-height,
+width=device-width,
+target-densityDpi=device-dpi"/>
+<!---->
+<!--<meta name="viewport" content="width=250"/>-->
+<!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=250, height=device-height, target-densitydpi=device-dpi"/>-->
 
+<!--[if lt IE9]><script src="excanvas.compiled.js"></script><![endif]-->
 <script src="base64.js"></script>
 <script src="ajax.js"></script>
-<script src="dungeons.js?v=1.5026"></script>
-<script src="main.js?v=1.5031"></script>
-
-
+<script src="DungeonGen.js"></script>
+<script src="dungeons4765.js?v=1.5044"></script>
+<script src="main3ee1.js?v=1.791"></script>
 <script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-29324474-2']);
-  _gaq.push(['_setDomainName', 'dashnet.org']);
-  _gaq.push(['_trackPageview']);
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-29324474-2']);
+_gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
 </script>
-
 </head>
 <body>
 
-<div id="topBar">
-	<div>
-		<b>Cookie Clicker</b> &copy; <a href="http://orteil.dashnet.org" target="_blank">Orteil</a>, 2013 - hosted by <a href="http://dashnet.org" target="_blank">DashNet</a> | <a href="http://twitter.com/orteil42" target="_blank">twitter</a> | <a href="http://orteil42.tumblr.com" target="_blank">tumblr</a> | Help? Bugs? Ideas? Check out the <a href="http://forum.dashnet.org" target="_blank">forum</a>! | Chat with us on <a href="http://forum.dashnet.org/discussion/277/irc-chat-channel/p1" target="_blank">IRC</a> | Getting a black screen? Try pressing ctrl-F5!
-		<div id="links" style="display:block;position:absolute;right:8px;top:4px;"></div>
-	</div>
-</div>
+<div id="wrapper">
 
-<div id="game">
-	<div id="javascriptError">
-		<div style="padding:64px 128px;">
-			<div class="title">Oops, looks like the game isn't loading right!</div>
-			<div>Please make sure your javascript is enabled, then refresh.<br>
-			This could also be caused by a problem on our side, in which case - wait a moment, then refresh!</div>
+
+	<div id="topBar">
+		<div>
+			<b>Cookie Clicker</b> &copy; <a href="../index.html" target="_blank">Orteil</a>, 2014 - <a href="http://dashnet.org/" target="_blank">DashNet</a> | <a href="http://twitter.com/orteil42" target="_blank">twitter</a> | <a href="http://orteil42.tumblr.com/" target="_blank">tumblr</a> | <a href="http://forum.dashnet.org/" target="_blank">forum</a> | <a href="http://forum.dashnet.org/discussion/277/irc-chat-channel/p1" target="_blank">IRC</a> | <a href="http://www.redbubble.com/people/dashnet" target="_blank" style="color:#6cf;">Cookie Clicker shirts, stickers and hoodies</a>! | Check out our new game, <a href="http://aqdragons.com/" target="_blank" style="color:#fc6;">AQ Dragons</a>!
+			<div id="links" style="display:block;position:absolute;right:8px;top:0px;"></div>
 		</div>
 	</div>
 
-	<div id="backgroundLayers">
-		<div id="backgroundLayer1"></div>
-		<div id="backgroundLayer2"></div>
-	</div>
-	
-	<div id="goldenCookie" class="goldenCookie"></div>
-	<div id="alert"></div>
-	<div id="particles"></div>
-	<div id="versionNumber" class="title"></div>
-	
-	<div id="sectionLeft" class="inset">
-		<div id="cookieShower"></div>
-		<div class="blackGradient"></div>
-		<div class="blackFiller"></div>
-		<div id="sectionLeftInfo"></div>
-		<div id="cookies" class="title"></div>
-		<div id="cookieAnchor">
-			<div id="cookieShine"></div>
-			<div id="cookieCursors"></div>
-			<div id="bigCookie"></div>
-			<div id="cookieNumbers"></div>
+	<div id="game">
+		<div id="javascriptError">
+			<div style="padding:64px 128px;">
+				<div class="title">Oops, looks like the game isn't loading right!</div>
+				<div>Please make sure your javascript is enabled, then refresh.<br>
+				This could also be caused by a problem on our side, in which case - wait a moment, then refresh!</div>
+				<!--<div class="title">Oops, looks like we've got a problem.</div>
+				<div>Please bear with us while we fix it.<br>Your save is safe, don't worry!</div>-->
+			</div>
 		</div>
-		<div id="milk">
-			<div id="milkLayer1" class="milkLayer"></div>
-			<div id="milkLayer2" class="milkLayer"></div>
-		</div>
-	</div>
 
-	<div class="separatorLeft"></div>
-	<div class="separatorRight"></div>
+
+		<canvas id="backgroundCanvas"></canvas>
 		
-	<div id="sectionMiddle" class="inset">
-		<div id="comments" class="inset title">
-			<div id="prefsButton" class="button">Menu</div>
-			<div id="statsButton" class="button">Stats</div>
-			<div id="logButton" class="button" style="font-size:80%;">Updates</div>
-			<div id="commentsText"></div>
+		<div id="goldenCookie" class="goldenCookie"></div>
+		<div id="seasonPopup" class="seasonPopup"></div>
+		<div id="alert"></div>
+		<div id="particles"></div>
+		<div id="notes"></div>
+		<div id="darken"></div>
+		<div id="promptAnchor"><div id="prompt" class="framed"><div id="promptContent"></div><div class="close" onclick="Game.ClosePrompt();">x</div></div></div>
+		<div id="versionNumber" class="title"></div>
+		<div id="timers"></div>
+		
+		<div id="sectionLeft" class="inset">
+			<canvas id="backgroundLeftCanvas" style="z-index:5;"></canvas>
+			<div class="blackFiller"></div>
+			<div class="blackGradient"></div>
+			<div id="sectionLeftInfo"></div>
+			<div id="cookies" class="title"></div>
+			<div id="bakeryNameAnchor"><div id="bakeryName" class="title"></div></div>
+			<div id="cookieAnchor">
+				<div id="bigCookie"></div>
+				<div id="cookieNumbers"></div>
+			</div>
+		</div>
+
+
+		<div class="separatorLeft"></div>
+		<div class="separatorRight"></div>
+			
+		<div id="sectionMiddle" class="inset">
+			<div id="comments" class="inset title">
+				<div id="prefsButton" class="button">Menu</div>
+				<div id="statsButton" class="button">Stats</div>
+				<div id="logButton" class="button" style="font-size:80%;">Updates</div>
+				<div id="commentsText" class="commentsText"></div>
+				<div class="separatorBottom"></div>
+			</div>
+			<div id="buildingsTitle" class="inset title zoneTitle">Buildings</div>
+			<div id="rows"></div>
+			<div id="menu"></div>
+			<div id="donateBox">
+				<form target="_blank" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="margin:0px 16px;">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="hosted_button_id" value="BBN2WL3TC6QH4">
+				<input type="image" src="../../www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
+				<img alt="" border="0" src="../../www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+				</form>
+				Help us keep developing the game!
+			</div>
+		</div>
+
+		<div id="sectionRight" class="inset">
+			<div id="store">
+				<div id="storeTitle" class="inset title zoneTitle">Store</div>
+				<div id="upgrades" class="storeSection"></div>
+				<div id="products" class="storeSection"></div>
+			</div>
+			
+			
+			<div id="support" style="margin-top:130px;">
+				<div class="supportComment">Sponsored links</div>
+				
+				<div style="position:relative;">
+				
+					<div style="position:relative;z-index:100;min-height:250px;">
+					
+						<!-- Google ad -->
+						<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+						<!-- Cookie Clicker Rectangle -->
+						<ins class="adsbygoogle"
+							 style="display:inline-block;width:300px;height:250px"
+							 data-ad-client="ca-pub-8491708950677704"
+							 data-ad-slot="9349826096"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						
+						<div style="height:16px;"></div>
+						
+						<!-- Google ad -->
+						<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+						<!-- Cookie Clicker Rectangle -->
+						<ins class="adsbygoogle"
+							 style="display:inline-block;width:300px;height:250px"
+							 data-ad-client="ca-pub-8491708950677704"
+							 data-ad-slot="9349826096"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						
+						<div style="height:16px;"></div>
+						
+						<!-- AdventureQuest Worlds banner -->
+						<a class="ad" id="aqad" href="http://www.aq.com/landing/cookie/?utm_campaign=AQW_CookieClicker&amp;utm_source=CookieClicker" target="_blank" title="AdventureQuest Worlds" style="background:url(img/aqworldsbanner.jpg) no-repeat;width:300px;height:64px;display:block;position:relative;margin:0px auto;">
+						</a>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!--
+		<div id="sectionAd" class="inset">
+		
+			<div class="supportComment">Sponsored links</div>
+			<div style="position:relative;">
+				<div class="supportPlaceholder">
+					<div>(Normally, there would be an ad here. It's fine if you want to block it, but remember - Cookie Clicker only happens because of ad revenue!)</div>
+				</div>
+				<div style="position:relative;z-index:100;">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<ins class="adsbygoogle"
+						 style="display:inline-block;width:160px;height:600px"
+						 data-ad-client="ca-pub-8491708950677704"
+						 data-ad-slot="8643839697"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+		
+		</div>
+		-->
+		
+		<div id="focusButtons">
+			<div id="focusLeft" class="title">Cookie</div>
+			<div id="focusMiddle" class="title" style="font-size:80%;padding-top:18px;padding-bottom:14px;">Buildings</div>
+			<div id="focusRight" class="title">Store</div>
+			<div id="focusMenu" class="title">Menu</div>
+		</div>
+		<div id="compactOverlay" class="title">
+			<div id="compactCommentsText" class="commentsText"></div>
+			<div id="compactCookies"></div>
 			<div class="separatorBottom"></div>
 		</div>
-		<div id="rows"></div>
-		<div id="menu"></div>
-	</div>
-
-	<div id="sectionRight" class="inset">
-		<div id="store">
-			<div id="storeTitle" class="inset title">Store</div>
-			<div id="upgrades">
-			</div>
-			<div id="products">
-			</div>
-		</div>
 		
-		<div id="support">
-			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate" style="margin:0px 16px;">
-			<div id="supportComment">Help us make more games!</div>
-			<input type="hidden" name="cmd" value="_s-xclick">
-			<input type="hidden" name="hosted_button_id" value="BBN2WL3TC6QH4">
-			<input type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal — The safer, easier way to pay online.">
-			<img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
-			</form>			
-		</div>
+		<div id="tooltipAnchor"><div id="tooltip" class="framed" onMouseOut="Game.tooltip.hide();"></div></div>
+
 	</div>
-	
-	<div id="tooltipAnchor"><div id="tooltip" onMouseOut="Game.tooltip.hide();"></div></div>
 
 </div>
 
 </body>
+
+<!-- Mirrored from orteil.dashnet.org/cookieclicker/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Feb 2015 13:05:35 GMT -->
 </html>
