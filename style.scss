@@ -86,6 +86,33 @@ a {
   text-decoration: underline;
   cursor: pointer;
   color: #ccc;
+  .option, .info a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #000;
+    margin: 2px 4px 2px 0px;
+    color: #ccc;
+    font-size: 12px;
+    padding: 4px 8px;
+    text-decoration: none;
+  }
+  .option.warning {
+    &:hover {
+      border-color: #f33;
+      color: #f33;
+   }
+    &:active {
+      background-color: #300;
+    }
+  }
+  &:hover {
+    border-color: #fff;
+    color: #fff;
+    text-shadow: none;
+  }
+  &:active {
+    background-color: #333;
+  }
   &:visited {
     text-decoration: underline;
     cursor: pointer;
@@ -174,35 +201,6 @@ a {
 
 .listing:hover .hidden {
   visibility: visible;
-}
-
-a.option, .info a {
-  display: inline-block;
-  border: 1px solid #ccc;
-  background: #000;
-  margin: 2px 4px 2px 0px;
-  color: #ccc;
-  font-size: 12px;
-  padding: 4px 8px;
-  text-decoration: none;
-  &:hover {
-    border-color: #fff;
-    color: #fff;
-    text-shadow: none;
-  }
-  &:active {
-    background-color: #333;
-  }
-}
-
-a.option.warning {
-  &:hover {
-    border-color: #f33;
-    color: #f33;
-  }
-  &:active {
-    background-color: #300;
-  }
 }
 
 .info a {
