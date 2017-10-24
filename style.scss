@@ -185,10 +185,9 @@ a.option, .info a {
     color: #fff;
     text-shadow: none;
   }
-}
-
-a.option:active, .info a:active {
-  background-color: #333;
+  &:active {
+    background-color: #333;
+  }
 }
 
 a.option.warning {
