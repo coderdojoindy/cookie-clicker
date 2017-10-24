@@ -538,17 +538,20 @@ q {
   font-size: 24px;
 }
 
-#cookieShower {
-  position: absolute;
+@mixin absolute {
   width: 100%;
+  position: absolute;
+}
+
+#cookieShower {
+  @include absolute
   height: 100%;
   z-index: 2;
 }
 
 #milk {
-  width: 100%;
+  @include absolute
   height: 0%;
-  position: absolute;
   left: 0px;
   bottom: 0px;
   z-index: 100;
@@ -556,9 +559,8 @@ q {
 }
 
 .milkLayer {
-  width: 100%;
+  @include absolute
   height: 100%;
-  position: absolute;
   left: 0px;
   top: 0px;
   background-repeat: repeat-x;
