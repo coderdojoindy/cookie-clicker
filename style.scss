@@ -616,22 +616,20 @@ q {
   }
 }
 
-#prefsButton:hover, #statsButton:hover {
-  left: -8px;
-}
-
 #prefsButton, #statsButton {
   padding: 14px 0px 10px 16px;
+  left: -16px;
+  &:hover {
+    left: -8px;
+  }
 }
 
 #prefsButton {
   top: 0px;
-  left: -16px;
 }
 
 #statsButton {
   bottom: 16px;
-  left: -16px;
 }
 
 #logButton {
