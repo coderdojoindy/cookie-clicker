@@ -387,10 +387,6 @@ q {
   }
 }
 
-.disabled .price {
-  color: #f66;
-}
-
 .price {
   &:before {
     content: '';
@@ -432,14 +428,10 @@ q {
   -ms-transition: opacity 0.1s ease-out,-ms-transform 0.1s ease-out;
   -o-transition: opacity 0.1s ease-out,-o-transform 0.1s ease-out;
   transition: opacity 0.1s ease-out,transform 0.1s ease-out;
-}
-
-.elderWrath #bigCookie {
-  background: url(img/imperfectCookie.png);
-  background-size: 256px 256px;
-}
-
-#bigCookie {
+  .elderWrath {
+      background: url(img/imperfectCookie.png);
+      background-size: 256px 256px;
+  }
   &:hover {
     -webkit-transform: scale(1.05, 1.05);
     opacity: 0.9;
