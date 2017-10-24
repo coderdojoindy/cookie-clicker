@@ -897,6 +897,7 @@ a.control {
   position: relative;
   background: #000;
   float: left;
+  background-image: url(img/icons.png?v=1);
   &:before {
     content: '';
     position: absolute;
@@ -908,25 +909,6 @@ a.control {
     background: url(img/upgradeFrame.png);
     z-index: 10;
   }
-}
-
-.icon {
-  width: 48px;
-  height: 48px;
-  display: inline-block;
-  margin: 0px 4px;
-  background-image: url(img/icons.png?v=1);
-}
-
-.crate {
-  background-image: url(img/icons.png?v=1);
-}
-
-.achievement {
-  opacity: 0.4;
-}
-
-.crate {
   &.enabled {
     opacity: 1;
   }
@@ -937,6 +919,18 @@ a.control {
     }
     background-color: #200e0a;
   }
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  margin: 0px 4px;
+  background-image: url(img/icons.png?v=1);
+}
+
+.achievement {
+  opacity: 0.4;
 }
 
 .product {
