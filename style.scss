@@ -787,9 +787,8 @@ a.control {
 }
 
 .map {
+  @include lefttop
   position: absolute;
-  left: 0px;
-  top: 0px;
   overflow: hidden;
   background: #000;
   .tile, .thing {
@@ -832,17 +831,16 @@ a.control {
   background: url(img/infoBG.png);
   color: #666;
   box-shadow: 0px 0px 4px #000;
-}
-
-.row .info:after {
-  width: 16px;
-  height: 128px;
-  position: absolute;
-  right: -16px;
-  top: 0px;
-  background: url(img/infoBGfade.png) repeat-y;
-  display: block;
-  content: '';
+  &:after {
+    width: 16px;
+    height: 128px;
+    position: absolute;
+    right: -16px;
+    top: 0px;
+    background: url(img/infoBGfade.png) repeat-y;
+    display: block;
+    content: '';
+  }
 }
 
 #sectionLeft .info {
@@ -853,13 +851,8 @@ a.control {
   height: auto;
 }
 
-.row:hover .info, #sectionLeft:hover .info {
-  visibility: visible;
-  opacity: 1;
-}
-
 .row {
-  &:hover .specialButton {
+  &:hover .specialButton, .info {
     visibility: visible;
     opacity: 1;
   }
@@ -874,6 +867,10 @@ a.control {
   @include lefttop
   position: absolute;
   width: 100%;
+  &:hover .info {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 #storeTitle {
