@@ -180,12 +180,11 @@ a.option, .info a {
   font-size: 12px;
   padding: 4px 8px;
   text-decoration: none;
-}
-
-a.option:hover, .info a:hover {
-  border-color: #fff;
-  color: #fff;
-  text-shadow: none;
+  &:hover {
+    border-color: #fff;
+    color: #fff;
+    text-shadow: none;
+  }
 }
 
 a.option:active, .info a:active {
