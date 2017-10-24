@@ -21,6 +21,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   position: absolute;
 }
 
+@mixin bottonright {
+  right: 0px;
+  bottom: 0px;
+}
+
 @mixin lefttop {
   left: 0px;
   top: 0px;
@@ -254,10 +259,9 @@ a.option.warning {
 }
 
 #javascriptError {
+  @include bottonright
   @include lefttop
   position: absolute;
-  right: 0px;
-  bottom: 0px;
   background: url(img/darkNoise.png);
   text-align: center;
   z-index: 100000000000;
@@ -266,11 +270,10 @@ a.option.warning {
 }
 
 #game {
+  @include bottonright
   position: absolute;
   left: 0px;
   top: 32px;
-  right: 0px;
-  bottom: 0px;
   overflow: hidden;
 }
 
@@ -319,12 +322,11 @@ a.option.warning {
     height: 640px;
   }
   .blackFiller {
+    @include bottonright
     background: #000;
     position: absolute;
     left: 0px;
-    right: 0px;
     top: 940px;
-    bottom: 0px;
   }
 }
 
@@ -651,13 +653,12 @@ q {
 }
 
 #menu {
+  @include bottonright
   display: none;
   z-index: 1000000;
   position: absolute;
   left: 16px;
-  right: 0px;
   top: 112px;
-  bottom: 0px;
   /*box-shadow:0px 0px 24px #000 inset;
   background:#000 url(img/darkNoise.png);*/
 }
