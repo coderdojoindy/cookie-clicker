@@ -385,9 +385,6 @@ q {
   &.disabled {
     color: #f66;
   }
-}
-
-.price {
   &:before {
     content: '';
     display: block;
