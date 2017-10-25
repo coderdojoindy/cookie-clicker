@@ -349,6 +349,14 @@ a {
     color: #fff;
     font-weight: bold;
   }
+  q {
+    display: block;
+    position: relative;
+    text-align: right;
+    margin-top: 8px;
+    font-style: italic;
+    opacity: 0.7;
+  }
   .name {
     font-weight: bold;
     font-size: 110%;
@@ -359,15 +367,6 @@ a {
 
 .description {
   margin: 4px 0px;
-}
-
-#tooltip q {
-  display: block;
-  position: relative;
-  text-align: right;
-  margin-top: 8px;
-  font-style: italic;
-  opacity: 0.7;
 }
 
 q {
