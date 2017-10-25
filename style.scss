@@ -275,15 +275,6 @@ a {
   overflow: hidden;
 }
 
-#sectionLeft {
-  @include lefttop
-  position: absolute;
-  width: 30%;
-  bottom: 0px;
-  min-width: 100px;
-  overflow: hidden;
-}
-
 #sectionMiddle {
   position: absolute;
   left: 30%;
@@ -297,10 +288,6 @@ a {
   overflow-y: scroll;
 }
 
-#game.onMenu #sectionMiddle {
-  background: #000 url(img/darkNoise.png);
-}
-
 #sectionRight {
   height: 100%;
   position: absolute;
@@ -311,6 +298,12 @@ a {
 }
 
 #sectionLeft {
+  @include lefttop
+  position: absolute;
+  width: 30%;
+  bottom: 0px;
+  min-width: 100px;
+  overflow: hidden;
   .blackGradient {
     background: url(img/blackGradient.png) repeat-x bottom;
     position: absolute;
@@ -630,6 +623,9 @@ q {
 #game.onMenu {
   #menu {
     display: block;
+  }
+  #sectionMiddle {
+    background: #000 url(img/darkNoise.png);
   }
   .row {
     display: none;
