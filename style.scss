@@ -769,6 +769,15 @@ a.control {
     top: 48px;
     background-position: -48px -48px;
   }
+  &:hover .specialButton, .info {
+    visibility: visible;
+    opacity: 1;
+  }
+  .object {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .map {
@@ -834,18 +843,6 @@ a.control {
   left: -16px;
   top: -16px;
   height: auto;
-}
-
-.row {
-  &:hover .specialButton, .info {
-    visibility: visible;
-    opacity: 1;
-  }
-  .object {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-  }
 }
 
 #sectionLeftInfo {
