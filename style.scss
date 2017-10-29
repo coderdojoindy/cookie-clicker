@@ -346,7 +346,7 @@ a {
       z-index: 5;
     }
     &Shower {
-      @include absolute;
+      @extend absolute;
       height: 100%;
       z-index: 2;
     }
