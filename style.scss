@@ -206,14 +206,13 @@ a {
     left: -4px;
     top: -2px;
   }
+  &:hover .hidden {
+    visibility: hidden;
+  }
 }
 
 .hidden {
   visibility: hidden;
-}
-
-.listing:hover .hidden {
-  visibility: visible;
 }
 
 .info a {
@@ -713,7 +712,7 @@ q {
     display: none;
   }
   .specialButton {
-    @extend lefttop;
+    @extend %lefttop;
     visibility: hidden;
     display: none;
     position: absolute;
