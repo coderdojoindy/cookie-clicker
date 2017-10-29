@@ -275,50 +275,50 @@ a {
   overflow: hidden;
 }
 
-#sectionMiddle {
-  position: absolute;
-  left: 30%;
-  padding-left: 16px;
-  margin-right: 15px;
-  top: 0px;
-  right: 318px;
-  bottom: 0px;
-  min-width: 100px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-#sectionRight {
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-
-#sectionLeft {
-  @include lefttop
-  position: absolute;
-  width: 30%;
-  bottom: 0px;
-  min-width: 100px;
-  overflow: hidden;
-  .blackGradient {
-    background: url(img/blackGradient.png) repeat-x bottom;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 300px;
-    height: 640px;
-  }
-  .blackFiller {
-    @include bottonright
-    background: #000;
-    position: absolute;
-    left: 0px;
-    top: 940px;
-  }
+#section {
+    &Middle, &Right, &Left, &Left.blackFiller {
+        position: absolute;
+    }
+    &Middle {
+      left: 30%;
+      padding-left: 16px;
+      margin-right: 15px;
+      top: 0px;
+      right: 318px;
+      bottom: 0px;
+      min-width: 100px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    &Right {
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
+    &Left {
+      @include lefttop
+      width: 30%;
+      bottom: 0px;
+      min-width: 100px;
+      overflow: hidden;
+      .blackGradient {
+        background: url(img/blackGradient.png) repeat-x bottom;   
+        right: 0px;
+        top: 300px;
+        height: 640px;
+      }
+      .blackFiller {
+        @include bottonright
+        background: #000;
+        top: 940px;
+      }
+    }
+  &Left, &Left.blackGradient, &Left.blackFiller {
+        left: 0px;
+    }
 }
 
 #tooltipAnchor {
