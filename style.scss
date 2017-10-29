@@ -681,7 +681,7 @@ q {
     padding-bottom: 16px;
   }
   .background {
-    @include lefttop;
+    @extend %lefttop;
     background: #999;
     position: absolute;
     height: 100%;
@@ -705,7 +705,7 @@ q {
     z-index: 10;
   }
   .special {
-    @include absolute
+    @extend %absolute
     z-index: 1000000;
     top: 0px;
     bottom: 16px;
@@ -713,7 +713,7 @@ q {
     display: none;
   }
   .specialButton {
-    @include lefttop;
+    @extend lefttop;
     visibility: hidden;
     display: none;
     position: absolute;
