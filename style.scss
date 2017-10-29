@@ -224,10 +224,10 @@ a {
 }
 
 #backgroundLayers {
-  @extend four;
+  @extend %four;
   height: 100%;
   div {
-    @extend lefttop;
+    @extend %lefttop;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -243,7 +243,7 @@ a {
 }
 
 #topBar {
-  @extend four;
+  @extend %four;
   height: 32px;
   background: url(img/darkNoise.png);
   box-shadow: 0px -4px 8px #666 inset;
@@ -257,8 +257,8 @@ a {
 }
 
 #javascriptError {
-  @extend bottonright;
-  @extend lefttop;
+  @extend %bottonright;
+  @extend %lefttop;
   position: absolute;
   background: url(img/darkNoise.png);
   text-align: center;
@@ -268,7 +268,7 @@ a {
 }
 
 #game {
-  @extend bottonright;
+  @extend %bottonright;
   position: absolute;
   left: 0px;
   top: 32px;
@@ -299,7 +299,7 @@ a {
       overflow-y: scroll;
     }
     &Left {
-      @extend lefttop;
+      @extend %lefttop;
       width: 30%;
       bottom: 0px;
       min-width: 100px;
@@ -311,7 +311,7 @@ a {
         height: 640px;
       }
       .blackFiller {
-        @extend bottonright;
+        @extend %bottonright;
         background: #000;
         top: 940px;
       }
@@ -351,7 +351,7 @@ a {
       z-index: 2;
     }
     &s {
-      @extend absolute;
+      @extend %absolute;
       left: 0px;
       top: 15%;
       text-align: center;
@@ -513,7 +513,7 @@ q {
 }
 
 #particles {
-  @extend lefttop;
+  @extend %lefttop;
   position: absolute;
 }
 
@@ -530,7 +530,7 @@ q {
 }
 
 #milk {
-  @extend absolute;
+  @extend %absolute;
   height: 0%;
   left: 0px;
   bottom: 0px;
@@ -539,8 +539,8 @@ q {
 }
 
 .milkLayer {
-  @extend absolute;
-  @extend lefttop;
+  @extend %absolute;
+  @extend %lefttop;
   height: 100%;
   background-repeat: repeat-x;
 }
@@ -631,7 +631,7 @@ q {
 }
 
 #menu {
-  @extend bottonright;
+  @extend %bottonright;
   display: none;
   z-index: 1000000;
   position: absolute;
@@ -774,7 +774,7 @@ a.control {
 }
 
 .map {
-  @extend lefttop;
+  @extend %lefttop;
   position: absolute;
   overflow: hidden;
   background: #000;
@@ -802,7 +802,7 @@ a.control {
 
 .row .info, #sectionLeft .info {
   /*visibility:hidden;*/
-  @extend lefttop;
+  @extend %lefttop;
   -webkit-transition: opacity 0.1s ease-out;
   -moz-transition: opacity 0.1s ease-out;
   -ms-transition: opacity 0.1s ease-out;
@@ -839,7 +839,7 @@ a.control {
 }
 
 #sectionLeftInfo {
-  @extend lefttop;
+  @extend %lefttop;
   position: absolute;
   width: 100%;
   &:hover .info {
@@ -937,7 +937,7 @@ a.control {
     opacity: 1;
   }
   .icon {
-    @extend lefttop;
+    @extend %lefttop;
     width: 64px;
     height: 64px;
     position: absolute;
