@@ -321,6 +321,70 @@ a {
     }
 }
 
+#cookie {
+    &Anchor, &Shine, &Numbers, &Cursors, &Shower, &s {
+        position: absolute;
+    }
+    &Anchor {
+      left: 50%;
+      top: 40%;
+    }
+    &Shine {
+      width: 512px;
+      height: 512px;
+      left: -256px;
+      top: -256px;
+      background: url(img/shine.png);
+      background-size: 100%;
+      z-index: 5;
+      opacity: 0.5;
+    }
+    &Numbers {
+      top: -80px;
+    }
+    &Cursors {
+      z-index: 5;
+    }
+    &Shower {
+      @include absolute
+      height: 100%;
+      z-index: 2;
+    }
+    &s {
+      @include absolute
+      left: 0px;
+      top: 15%;
+      text-align: center;
+      z-index: 200;
+      background: #000;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2px 0px;
+    }
+}
+
+.cookie {
+    &Number, &Particle {
+      position: absolute;
+    }
+    &Number {
+      pointer-events: none;
+      left: -100px;
+      top: 0px;
+      width: 200px;
+      z-index: 100;
+      text-align: center;
+      text-shadow: none;
+    }
+    &Particle {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
+      margin-top: -32px;
+      background: url(img/smallCookies.png);
+      opacity: 0;
+    }
+}
+
 #tooltipAnchor {
   position: absolute;
   z-index: 1000000000;
@@ -396,12 +460,6 @@ q {
   }
 }
 
-#cookieAnchor {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-}
-
 #bigCookie {
   width: 256px;
   height: 256px;
@@ -447,54 +505,11 @@ q {
   }
 }
 
-#cookieShine {
-  width: 512px;
-  height: 512px;
-  position: absolute;
-  left: -256px;
-  top: -256px;
-  background: url(img/shine.png);
-  background-size: 100%;
-  z-index: 5;
-  opacity: 0.5;
-}
-
-#cookieNumbers {
-  position: absolute;
-  top: -80px;
-}
-
-.cookieNumber {
-  position: absolute;
-  pointer-events: none;
-  left: -100px;
-  top: 0px;
-  width: 200px;
-  z-index: 100;
-  text-align: center;
-  text-shadow: none;
-}
-
-#cookieCursors {
-  position: absolute;
-  z-index: 5;
-}
-
 .cursor {
   width: 32px;
   height: 32px;
   position: absolute;
   background: url(img/cursor.png);
-}
-
-.cookieParticle {
-  width: 64px;
-  height: 64px;
-  margin-left: -32px;
-  margin-top: -32px;
-  position: absolute;
-  background: url(img/smallCookies.png);
-  opacity: 0;
 }
 
 #particles {
@@ -514,12 +529,6 @@ q {
   font-size: 24px;
 }
 
-#cookieShower {
-  @include absolute
-  height: 100%;
-  z-index: 2;
-}
-
 #milk {
   @include absolute
   height: 0%;
@@ -536,42 +545,31 @@ q {
   background-repeat: repeat-x;
 }
 
-#cookies {
-  @include absolute
-  left: 0px;
-  top: 15%;
-  text-align: center;
-  z-index: 200;
-  background: #000;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 2px 0px;
-}
-
-.separatorLeft, .separatorRight {
-  width: 16px;
-  height: 100%;
-  background: url(img/panelVertical.png) repeat-y;
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  z-index: 100;
-}
-
-.separatorLeft {
-  left: 30%;
-}
-
-.separatorRight {
-  right: 317px;
-}
-
-.separatorBottom {
-  width: 100%;
-  height: 16px;
-  background: url(img/panelHorizontal.png) repeat-x;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
+.separator {
+    &Left, &Right, &Bottom {
+        position: absolute;
+    }
+    &Left, & Right {
+      width: 16px;
+      height: 100%;
+      background: url(img/panelVertical.png) repeat-y;
+      top: 0px;
+      bottom: 0px;
+      z-index: 100;
+    }
+    &Left {
+        left: 30%;
+    }
+    &Right {
+        right: 317px;
+    }
+    &Bottom {
+      width: 100%;
+      height: 16px;
+      background: url(img/panelHorizontal.png) repeat-x;
+      left: 0px;
+      bottom: 0px;
+    }
 }
 
 .button {
