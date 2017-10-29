@@ -9,6 +9,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+@mixin transform($scale, $opacity) {
+  -webkit-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -moz-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -ms-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -o-transform: scale($scale, $scale);
+  opacity: $opacity;
+  transform: scale($scale, $scale);
+  opacity: $opacity;
+}
+
 %four {
   left: 0px;
   top: 0px;
@@ -480,28 +493,10 @@ q {
       background-size: 256px 256px;
   }
   &:hover {
-    -webkit-transform: scale(1.05, 1.05);
-    opacity: 0.9;
-    -moz-transform: scale(1.05, 1.05);
-    opacity: 0.9;
-    -ms-transform: scale(1.05, 1.05);
-    opacity: 0.9;
-    -o-transform: scale(1.05, 1.05);
-    opacity: 0.9;
-    transform: scale(1.05, 1.05);
-    opacity: 0.9;
+    @include scale(1.05, 0.9)
   }
   &:active {
-    -webkit-transform: scale(0.98, 0.98);
-    opacity: 1;
-    -moz-transform: scale(0.98, 0.98);
-    opacity: 1;
-    -ms-transform: scale(0.98, 0.98);
-    opacity: 1;
-    -o-transform: scale(0.98, 0.98);
-    opacity: 1;
-    transform: scale(0.98, 0.98);
-    opacity: 1;
+    @include scale(0.98, 1)
   }
 }
 
