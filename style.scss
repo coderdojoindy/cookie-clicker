@@ -686,7 +686,7 @@ q {
     padding-bottom: 16px;
   }
   .background {
-    @include lefttop
+    @include lefttop;
     background: #999;
     position: absolute;
     height: 100%;
@@ -718,7 +718,7 @@ q {
     display: none;
   }
   .specialButton {
-    @include lefttop
+    @include lefttop;
     visibility: hidden;
     display: none;
     position: absolute;
@@ -779,7 +779,7 @@ a.control {
   overflow: hidden;
   background: #000;
   .tile, .thing {
-    @include lefttop
+    @include lefttop;
     width: 16px;
     height: 16px;
     position: absolute;
