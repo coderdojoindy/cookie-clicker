@@ -753,7 +753,7 @@ a.control {
   overflow: hidden;
   background: #000;
   .tile, .thing {
-    @include lefttop;
+    @extend %lefttop;
     width: 16px;
     height: 16px;
     position: absolute;
