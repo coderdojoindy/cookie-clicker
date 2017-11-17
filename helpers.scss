@@ -1,0 +1,34 @@
+@mixin transform($scale, $opacity) {
+  -webkit-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -moz-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -ms-transform: scale($scale, $scale);
+  opacity: $opacity;
+  -o-transform: scale($scale, $scale);
+  opacity: $opacity;
+  transform: scale($scale, $scale);
+  opacity: $opacity;
+}
+
+%four {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  position: absolute;
+}
+
+%absolute {
+  width: 100%;
+  position: absolute;
+}
+
+%bottonright {
+  right: 0px;
+  bottom: 0px;
+}
+
+%lefttop {
+  left: 0px;
+  top: 0px;
+}
